@@ -8,27 +8,12 @@
 
 <meta name="description" content="Mobile Repair Tips - Battery, Charging, Display, Software Solutions">
 <meta name="robots" content="index, follow">
-<meta name="keywords" content="mobile repair, battery problem, charging issue, display repair, phone fix">
+<meta name="keywords" content="mobile repair, phone repair, battery fix, charging problem">
 <meta name="author" content="Maa Jagdamba Mobile Repair">
 
 <!-- AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9770258289979386"
 crossorigin="anonymous"></script>
-
-<!-- SEO JSON -->
-<script type="application/ld+json">
-{
-"@context": "https://schema.org",
-"@type": "LocalBusiness",
-"name": "Maa Jagdamba Mobile Repair",
-"telephone": "+91-9102386420",
-"address": {
-"@type": "PostalAddress",
-"addressLocality": "Jharkhand",
-"addressCountry": "India"
-}
-}
-</script>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
@@ -40,7 +25,7 @@ background:#0a0a0a;
 color:#fff;
 }
 
-/* LOADER */
+/* Loader */
 #loader{
 position:fixed;
 width:100%;
@@ -59,38 +44,21 @@ border-top:5px solid transparent;
 border-radius:50%;
 animation:spin 1s linear infinite;
 }
-@keyframes spin{
-100%{transform:rotate(360deg);}
-}
+@keyframes spin{100%{transform:rotate(360deg);}}
 
-/* SLIDER */
-.slider{
-height:220px;
-overflow:hidden;
-position:relative;
+/* Section */
+.section{
+margin:15px;
+padding:20px;
+background:rgba(255,255,255,0.05);
+border-radius:12px;
+box-shadow:0 0 20px rgba(0,255,255,0.3);
+transition:0.3s;
 }
-.slide{
-position:absolute;
-width:100%;
-height:100%;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:22px;
-background:linear-gradient(45deg,#000,#0f2027);
-animation:slide 12s infinite;
-}
-.slide:nth-child(2){animation-delay:4s;}
-.slide:nth-child(3){animation-delay:8s;}
-@keyframes slide{
-0%{opacity:0;}
-10%{opacity:1;}
-30%{opacity:1;}
-40%{opacity:0;}
-100%{opacity:0;}
-}
+.section:hover{transform:scale(1.02);}
 
-/* NAV */
+h2{color:#00ffff;}
+
 nav{
 text-align:center;
 padding:10px;
@@ -102,49 +70,61 @@ margin:10px;
 text-decoration:none;
 }
 
-/* CARD */
-.section{
-margin:15px;
-padding:20px;
-background:rgba(255,255,255,0.05);
-border-radius:12px;
-box-shadow:0 0 15px rgba(0,255,255,0.2);
-animation:fade 1s ease;
-}
-@keyframes fade{
-from{opacity:0;transform:translateY(30px);}
-to{opacity:1;transform:translateY(0);}
-}
-
-h2{color:#00ffff;}
-
+/* Ads */
 .ads{text-align:center;margin:20px;}
+
+/* WhatsApp Button */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#fff;
+padding:12px 15px;
+border-radius:50px;
+text-decoration:none;
+}
+
+/* Share */
+.share a{
+display:inline-block;
+margin:5px;
+padding:10px;
+background:#00ffff;
+color:#000;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
 </style>
 </head>
 
 <body>
 
-<!-- LOADER -->
-<div id="loader">
-<div class="loader-circle"></div>
-</div>
+<!-- Loader -->
+<div id="loader"><div class="loader-circle"></div></div>
 
-<!-- SLIDER -->
-<div class="slider">
-<div class="slide">🔧 Mobile Repair Tips</div>
-<div class="slide">⚡ Fast Charging Solutions</div>
-<div class="slide">📱 Display & Software Fix</div>
-</div>
-
+<!-- NAV -->
 <nav>
 <a href="#battery">Battery</a>
 <a href="#charging">Charging</a>
 <a href="#display">Display</a>
-<a href="#software">Software</a>
 <a href="#contact">Contact</a>
 </nav>
 
-<!-- ADS -->
+<!-- TRAFFIC SYSTEM -->
+<div class="section">
+<h2>🚀 Join & Share</h2>
+<p>Daily mobile repair tips के लिए WhatsApp join करें और दोस्तों के साथ share करें.</p>
+
+<div class="share">
+<a href="https://wa.me/?text=Check this mobile repair site https://aanand112.github.io/">WhatsApp Share</a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://aanand112.github.io/">Facebook</a>
+<a href="https://t.me/share/url?url=https://aanand112.github.io/">Telegram</a>
+</div>
+</div>
+
+<!-- AD -->
 <div class="ads">
 <ins class="adsbygoogle"
 style="display:block"
@@ -152,106 +132,284 @@ data-ad-client="ca-pub-9770258289979386"
 data-ad-slot="9452856363"
 data-ad-format="auto"
 data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
 <!-- AUTO BLOG -->
 <div class="section">
-<h2>📰 Latest Mobile Tips</h2>
-<div id="blogContainer"></div>
+<h2>📰 Latest Mobile Tips (Auto)</h2>
+<div id="blog"></div>
 </div>
 
 <!-- CONTENT -->
 <div class="section" id="battery">
 <h2>Battery Problems</h2>
-<p>Battery drain fast, overheating, swelling, replace battery, power saving use, apps close, brightness low, background apps बंद करें, original charger use करें।</p>
+<p>Battery drain fast? Background apps बंद करें, brightness कम रखें.</p>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Maa Jagdamba Mobile Repair</title>
+
+<meta name="description" content="Mobile Repair Tips - Battery, Charging, Display, Software Solutions">
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="mobile repair, phone repair, battery fix, charging problem">
+<meta name="author" content="Maa Jagdamba Mobile Repair">
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9770258289979386"
+crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#0a0a0a;
+color:#fff;
+}
+
+/* Loader */
+#loader{
+position:fixed;
+width:100%;
+height:100%;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+.loader-circle{
+width:50px;
+height:50px;
+border:5px solid #00ffff;
+border-top:5px solid transparent;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+@keyframes spin{100%{transform:rotate(360deg);}}
+
+/* Section */
+.section{
+margin:15px;
+padding:20px;
+background:rgba(255,255,255,0.05);
+border-radius:12px;
+box-shadow:0 0 20px rgba(0,255,255,0.3);
+transition:0.3s;
+}
+.section:hover{transform:scale(1.02);}
+
+h2{color:#00ffff;}
+
+nav{
+text-align:center;
+padding:10px;
+background:#111;
+}
+nav a{
+color:#00ffff;
+margin:10px;
+text-decoration:none;
+}
+
+/* Ads */
+.ads{text-align:center;margin:20px;}
+
+/* WhatsApp Button */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#fff;
+padding:12px 15px;
+border-radius:50px;
+text-decoration:none;
+}
+
+/* Share */
+.share a{
+display:inline-block;
+margin:5px;
+padding:10px;
+background:#00ffff;
+color:#000;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Loader -->
+<div id="loader"><div class="loader-circle"></div></div>
+
+<!-- NAV -->
+<nav>
+<a href="#battery">Battery</a>
+<a href="#charging">Charging</a>
+<a href="#display">Display</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- TRAFFIC SYSTEM -->
+<div class="section">
+<h2>🚀 Join & Share</h2>
+<p>Daily mobile repair tips के लिए WhatsApp join करें और दोस्तों के साथ share करें.</p>
+
+<div class="share">
+<a href="https://wa.me/?text=Check this mobile repair site https://aanand112.github.io/">WhatsApp Share</a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://aanand112.github.io/">Facebook</a>
+<a href="https://t.me/share/url?url=https://aanand112.github.io/">Telegram</a>
+</div>
+</div>
+
+<!-- AD -->
+<div class="ads">
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-9770258289979386"
+data-ad-slot="9452856363"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- AUTO BLOG -->
+<div class="section">
+<h2>📰 Latest Mobile Tips (Auto)</h2>
+<div id="blog"></div>
+</div>
+
+<!-- CONTENT -->
+<div class="section" id="battery">
+<h2>Battery Problems</h2>
+<p>Battery drain fast? Background apps बंद करें, brightness कम रखें.</p>
 </div>
 
 <div class="section" id="charging">
 <h2>Charging Issues</h2>
-<p>Charging pin loose, cable damage, port clean करें, slow charging fix, fast charger use करें, socket issue check करें।</p>
+<p>Charging pin साफ करें, cable change करें, fast charger use करें.</p>
 </div>
 
 <div class="section" id="display">
 <h2>Display Problems</h2>
-<p>Screen crack, touch issue, black screen, flicker, ghost touch, display replace ही solution होता है।</p>
-</div>
-
-<div class="section" id="software">
-<h2>Software Problems</h2>
-<p>Phone hang, apps crash, update software, virus remove, factory reset, storage clear करें।</p>
+<p>Screen damage होने पर display replace करना best solution है.</p>
 </div>
 
 <div class="section">
-<h2>About Us</h2>
-<p>Maa Jagdamba Mobile Repair एक trusted mobile repair service है। हम battery, charging, display और software issues का fast और reliable solution देते हैं।</p>
+<h2>Complete Mobile Repair Guide</h2>
+<p>
+Mobile repair एक skill है जिसमें battery, charging, display और software issues fix किए जाते हैं।
+यह वेबसाइट simple तरीके से सभी solutions देती है।
+</p>
 </div>
 
+<!-- CONTACT -->
 <div class="section" id="contact">
 <h2>Contact Us</h2>
-<p>📞 9102386420</p>
-<p>📧 aanandsingh7555@gmail.com</p>
+<p>📞 9102386420 / 7004470872</p>
+<p>📘 Facebook: <a href="https://www.facebook.com/" style="color:#00ffff;">Visit Profile</a></p>
 <p>📍 Jharkhand, India</p>
 </div>
 
-<!-- PRIVACY -->
-<div class="section">
-<h2>Privacy Policy</h2>
-<p>This website uses cookies and Google AdSense to display ads.</p>
-<p>Third-party vendors including Google use cookies.</p>
-<p>Users can opt out via Google Ads Settings.</p>
-<p>We do not collect personal data without permission.</p>
-</div>
+<!-- WhatsApp -->
+<a class="whatsapp" href="https://wa.me/919102386420">💬 Chat</a>
 
-<!-- BLOG SCRIPT -->
+<!-- SCRIPT -->
 <script>
-const blogs = [
-"Battery जल्दी खत्म? Background apps बंद करें",
-"Mobile heat? Heavy apps हटाओ",
+const tips=[
+"Battery drain? Background apps बंद करो",
+"फोन heat? Heavy apps हटाओ",
 "Charging slow? Original charger use करो",
 "Phone hang? Cache clear करो",
 "Display टूटा? Replace करो",
 "Network issue? SIM बदलो",
-"Phone slow? Storage खाली करो",
+"फोन slow? Storage खाली करो",
 "App crash? Update करो",
 "Speaker low? Clean करो",
 "Restart issue? Software fix करो"
 ];
 
-function loadBlogs(){
-let container=document.getElementById("blogContainer");
 let html="";
-for(let i=0;i<blogs.length;i++){
-html+= "<p>✔ "+blogs[i]+"</p>";
+for(let i=0;i<tips.length;i++){
+html+="<p>✔ "+tips[i]+"</p>";
 }
-container.innerHTML=html;
-}
-loadBlogs();
-</script>
+document.getElementById("blog").innerHTML=html;
 
-<!-- LOADER FIX (MAIN) -->
-<script>
-window.addEventListener("load", function () {
-  setTimeout(function(){
-    var loader = document.getElementById("loader");
-    if(loader){
-      loader.style.display = "none";
-    }
-  }, 1000);
+// Loader fix
+window.addEventListener("load",function(){
+setTimeout(()=>{document.getElementById("loader").style.display="none";},1000);
 });
-</script>
-
-<!-- LOADER FIX (BACKUP) -->
-<script>
-setTimeout(function(){
-  var loader = document.getElementById("loader");
-  if(loader){
-    loader.style.display = "none";
-  }
-}, 3000);
+setTimeout(()=>{document.getElementById("loader").style.display="none";},3000);
 </script>
 
 </body>
-</html>
+  </html>
+<div class="section" id="charging">
+<h2>Charging Issues</h2>
+<p>Charging pin साफ करें, cable change करें, fast charger use करें.</p>
+</div>
+
+<div class="section" id="display">
+<h2>Display Problems</h2>
+<p>Screen damage होने पर display replace करना best solution है.</p>
+</div>
+
+<div class="section">
+<h2>Complete Mobile Repair Guide</h2>
+<p>
+Mobile repair एक skill है जिसमें battery, charging, display और software issues fix किए जाते हैं।
+यह वेबसाइट simple तरीके से सभी solutions देती है।
+</p>
+</div>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+<h2>Contact Us</h2>
+<p>📞 9102386420 / 7004470872</p>
+<p>📘 Facebook: <a href="https://www.facebook.com/" style="color:#00ffff;">Visit Profile</a></p>
+<p>📍 Jharkhand, India</p>
+</div>
+
+<!-- WhatsApp -->
+<a class="whatsapp" href="https://wa.me/919102386420">💬 Chat</a>
+
+<!-- SCRIPT -->
+<script>
+const tips=[
+"Battery drain? Background apps बंद करो",
+"फोन heat? Heavy apps हटाओ",
+"Charging slow? Original charger use करो",
+"Phone hang? Cache clear करो",
+"Display टूटा? Replace करो",
+"Network issue? SIM बदलो",
+"फोन slow? Storage खाली करो",
+"App crash? Update करो",
+"Speaker low? Clean करो",
+"Restart issue? Software fix करो"
+];
+
+let html="";
+for(let i=0;i<tips.length;i++){
+html+="<p>✔ "+tips[i]+"</p>";
+}
+document.getElementById("blog").innerHTML=html;
+
+// Loader fix
+window.addEventListener("load",function(){
+setTimeout(()=>{document.getElementById("loader").style.display="none";},1000);
+});
+setTimeout(()=>{document.getElementById("loader").style.display="none";},3000);
+</script>
+
+</body>
+  </html>
